@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Harsh_Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="static/Harsh-icon.png">
+
+</head>
+
+<body>
+      <!-- Background -->
+  <canvas id="bgCanvas"></canvas>
+  <!-- <div id="sphereText">CODE RUNNER</div> -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="hamburger" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-particles"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Harsh</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="typing-text"></span>
+                </h2>
+                <p class="hero-description">
+                    I create beautiful and functional web applications with modern technologies.
+                    Passionate about clean code, user experience, and innovative solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                    <a href="{{ url_for('static', filename='MyCV (2).docx') }}" download="MyCV (2).docx"
+                        class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+
+
+
+
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-img">
+                        <img src="{{ url_for('static', filename='harsh.jpg') }}" alt="Harsh Yadav">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know more about my background and passion</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3>My Story</h3>
+                        <p>
+                            I'm a passionate Web developer creating
+                            digital experiences that make a difference. I specialize in modern web technologies
+                            and love turning complex problems into simple, beautiful solutions.
+                        </p>
+                        <p>
+                            When I'm not coding, you can find me exploring new technologies, contributing to
+                            open-source projects, or sharing my knowledge with the developer community through
+                            blog posts and mentoring.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat">
+                                <span class="stat-number" data-target="50">3</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-target="5">0</span>
+                                <span class="stat-label">Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number" data-target="100">0</span>
+                                <span class="stat-label">Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-container">
+                        <img src="{{ url_for('static', filename='About.gif') }}"
+                            alt="About Me">
+                        <div class="floating-elements">
+                            <div class="floating-element" style="--delay: 0s">💡</div>
+                            <div class="floating-element" style="--delay: 1s">🚀</div>
+                            <div class="floating-element" style="--delay: 2s">⚡</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript/React</span>
+                                <span class="skill-percentage">45%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="45%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Tools</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python/Flask</span>
+                                <span class="skill-percentage">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">48%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="48%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Databases</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tech-icons">
+                    <div class="tech-icon" data-tooltip="JavaScript">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="React">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Python">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Node.js">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="HTML5">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Git">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="tech-icon" data-tooltip="Docker">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="E-commerce Platform">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-tooltip="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" data-tooltip="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce solution built with React, Flask, and PostgreSQL.
+                            Features include user authentication, payment processing, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Task Management App">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-tooltip="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" data-tooltip="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">
+                            A collaborative task management application with real-time updates,
+                            drag-and-drop functionality, and team collaboration features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="Analytics Dashboard">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" data-tooltip="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" data-tooltip="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            A comprehensive analytics dashboard with interactive charts,
+                            real-time data visualization, and customizable reporting features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>abc.123@example.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <p>+91 12345-67890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Mathura, Uttar Pradesh, India</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <!-- <a href="#" class="social-link" data-tooltip="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a> -->
+                            <a href="https://github.com/Harsh-Hii" class="social-link" data-tooltip="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <!-- <a href="#" class="social-link" data-tooltip="Twitter">
+                                <i class="fab fa-twitter"></i> -->
+                            </a>
+                            <a href="https://www.instagram.com/harsh_vrindavanvasi/" class="social-link"
+                                data-tooltip="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" id="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" id="subject" required>
+                            <label for="subject">Address</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="formResponse" class="form-response"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 HARSH YADAV. All rights reserved. Made html css js with and Flask</p>
+            </div>
+        </div>
+    </footer>
+
+      <!-- Three.js Background Animation -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+  <script>
+    const canvas = document.getElementById("bgCanvas");
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    camera.position.z = 400;
+
+    // Star sphere
+    const starCount = 2000;
+    const starPositions = new Float32Array(starCount * 3);
+    const radius = 150;
+    for (let i = 0; i < starCount; i++) {
+      const phi = Math.acos(2 * Math.random() - 1);
+      const theta = 2 * Math.PI * Math.random();
+      starPositions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
+      starPositions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
+      starPositions[i * 3 + 2] = radius * Math.cos(phi);
+    }
+    const starGeometry = new THREE.BufferGeometry();
+    starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
+    const starMaterial = new THREE.PointsMaterial({ color: 0x00eaff, size: 1.5, transparent: true });
+    const starSphere = new THREE.Points(starGeometry, starMaterial);
+    scene.add(starSphere);
+
+    // Outer stars
+    const outerStarsCount = 3000;
+    const outerPositions = new Float32Array(outerStarsCount * 3);
+    for (let i = 0; i < outerStarsCount * 3; i++) outerPositions[i] = (Math.random() - 0.5) * 3000;
+    const outerGeometry = new THREE.BufferGeometry();
+    outerGeometry.setAttribute('position', new THREE.BufferAttribute(outerPositions, 3));
+    const outerMaterial = new THREE.PointsMaterial({ color: 0xffffff, size: 1 });
+    const outerStars = new THREE.Points(outerGeometry, outerMaterial);
+    scene.add(outerStars);
+
+    // Animate stars
+    function animate() {
+      requestAnimationFrame(animate);
+      starSphere.rotation.y += 0.003;
+      starSphere.rotation.x += 0.001;
+      outerStars.rotation.y += 0.0002;
+      outerStars.rotation.x += 0.0001;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    window.addEventListener("resize", () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+
+</html>
