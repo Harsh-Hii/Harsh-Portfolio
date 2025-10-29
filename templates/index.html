@@ -452,22 +452,7 @@
     renderer.setPixelRatio(window.devicePixelRatio);
     camera.position.z = 400;
 
-    // Star sphere
-    const starCount = 2000;
-    const starPositions = new Float32Array(starCount * 3);
-    const radius = 150;
-    for (let i = 0; i < starCount; i++) {
-      const phi = Math.acos(2 * Math.random() - 1);
-      const theta = 2 * Math.PI * Math.random();
-      starPositions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
-      starPositions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
-      starPositions[i * 3 + 2] = radius * Math.cos(phi);
-    }
-    const starGeometry = new THREE.BufferGeometry();
-    starGeometry.setAttribute('position', new THREE.BufferAttribute(starPositions, 3));
-    const starMaterial = new THREE.PointsMaterial({ color: 0x00eaff, size: 1.5, transparent: true });
-    const starSphere = new THREE.Points(starGeometry, starMaterial);
-    scene.add(starSphere);
+ 
 
     // Outer stars
     const outerStarsCount = 3000;
