@@ -2,3 +2,6 @@ Flask==2.3.3
 Flask-Mail==0.9.1
 Werkzeug==2.3.7
 gunicorn
+psycopg2-binary
+sqlalchemy
+Flask-Mail==0.9.1
