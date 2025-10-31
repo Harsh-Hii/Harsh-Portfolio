@@ -8,7 +8,7 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 # -------------------- DATABASE SETUP -------------------- #
-DATABASE_URL = os.getenv("DATABASE_URL", "")
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://contact_form_db_bx1g_user:iNOuAXlCYfFdH2vlEC5gjgyUMLXudV9k@dpg-d42idap5pdvs73d410ng-a.oregon-postgres.render.com/contact_form_db_bx1g")
 
 def init_db():
     """Create contacts table if it doesn't exist."""
